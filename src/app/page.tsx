@@ -41,7 +41,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    let interval;
+    let interval: NodeJS.Timeout | number | undefined = undefined;
     if (squareVisible) {
       // Start a timer interval when the square is visible
       interval = setInterval(() => {
